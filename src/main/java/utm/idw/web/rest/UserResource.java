@@ -85,7 +85,7 @@ public class UserResource {
 
     private final UserRepository userRepository;
 
-    private final MailSrvce mailService;
+    private final MailService mailService;
 
     public UserResource(UserService userService, UserRepository userRepository, MailService mailService) {
         this.userService = userService;

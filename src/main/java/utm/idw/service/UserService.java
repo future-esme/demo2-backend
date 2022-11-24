@@ -160,7 +160,7 @@ public class UserService {
                 .collect(Collectors.toSet());
             user.setAuthorities(authorities);
         }
-        userRepository.save(user);
+        userRepositorysave(user);
         log.debug("Created Information for User: {}", user);
         return user;
     }
