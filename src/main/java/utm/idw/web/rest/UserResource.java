@@ -108,7 +108,7 @@ public class UserResource {
     @PostMapping("/users")
     @PreAuthorize("hasAuthority(\"" + AuthoritiesConstants.ADMIN + "\")")
     public ResponseEntity<User> createUser(@Valid @RequestBody AdminUserDTO userDTO) throws URISyntaxException {
-        log.debug("REST request to save User : {}", userDTO);
+        log.debug("REST request to save User to database : {}", userDTO);
 
         if (userDTO.getId() != null) {
             throw new BadRequestAlertException("A new user cannot already have an ID", "userManagement", "idexists");
